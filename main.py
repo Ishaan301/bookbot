@@ -9,14 +9,12 @@ def main() :
     with open(book) as f:
         file_contents = f.read()
         words = file_contents.split()
-        # print(len(words))
         dict = number_of_chars(file_contents)
-        # print(dict)
         new_dict = []
         for letter in dict:
             new_dict.append({"name": letter, "num": dict[letter]})
         new_dict.sort(reverse=True, key=sort_on)
-        # print(new_dict)
+
         print(f"--- Begin report of {book} ---")
         print(f"{len(words)} words found in the document")
         print()
